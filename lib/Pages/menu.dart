@@ -1,3 +1,4 @@
+import 'package:blog/Pages/signup.dart';
 import 'package:flutter/material.dart';
 
 class menu extends StatefulWidget {
@@ -64,7 +65,9 @@ class _menuState extends State<menu> {
                       backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder()
                   ),
-                  onPressed: (){}, child: Text("SIGN UP",style: TextStyle(color: Colors.limeAccent),)),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>signup()));
+                  }, child: Text("SIGN UP",style: TextStyle(color: Colors.limeAccent),)),
             )
           ],
         ),
