@@ -12,6 +12,7 @@ class _menuState extends State<menu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.limeAccent.withOpacity(.2),
         title: Row(
           children: [
             Icon(Icons.menu),
@@ -21,6 +22,14 @@ class _menuState extends State<menu> {
         )
       ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.limeAccent.withOpacity(.3),
+              Colors.black.withOpacity(.2)
+            ]
+          )
+        ),
         padding: EdgeInsets.all(15),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,10 +47,25 @@ class _menuState extends State<menu> {
                   border: OutlineInputBorder()
               ),
             ),
-            SizedBox(height: 10),
-            ElevatedButton(onPressed: (){}, child: Text("SIGN IN")),
+            SizedBox(height: 20),
+            SizedBox(
+              width: 200,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      shape: RoundedRectangleBorder()
+                    ),
+                    onPressed: (){}, child: Text("SIGN IN",style: TextStyle(color: Colors.limeAccent),))),
             SizedBox(height: 10,),
-            ElevatedButton(onPressed: (){}, child: Text("SIGN UP"))
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder()
+                  ),
+                  onPressed: (){}, child: Text("SIGN UP",style: TextStyle(color: Colors.limeAccent),)),
+            )
           ],
         ),
       ),
